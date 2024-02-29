@@ -32,4 +32,6 @@ public class SelectionSort {
         selectionSort(arr);
         printArr(arr);
     }
+
+
 }
