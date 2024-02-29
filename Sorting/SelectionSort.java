@@ -4,14 +4,14 @@ public class SelectionSort {
     // TC : O(n^2)
     // Get the minimum and swap it with the beginning
     public static void selectionSort(int[] arr){
+        int n = arr.length;
         int minPos = 0;
-        for (int i=0; i<arr.length-1; i++){
+        for (int i=0; i<=n-2; i++){
             minPos = i;
-            for (int j=i+1; j< arr.length; j++){
-                // found min pos
-                if (arr[minPos] >= arr[j]) minPos = j;
+            for (int j=i+1; j<=n-1; j++){
+                if (arr[minPos] > arr[j]) minPos = j;
             }
-            // swap with min pos
+            // swap the minpos with i
             int temp = arr[minPos];
             arr[minPos] = arr[i];
             arr[i] = temp;
